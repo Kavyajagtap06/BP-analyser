@@ -1,0 +1,35 @@
+def identify_blood_pressure(systolic, diastolic):
+    if systolic > 140 or diastolic > 90:
+        return "High Blood Pressure"
+    elif systolic < 90 or diastolic < 60:
+        return "Low Blood Pressure"
+    else:
+        return "Normal Blood Pressure"
+
+def print_remedies(blood_pressure_status):
+    if blood_pressure_status == "High Blood Pressure":
+        print("Remedies for High Blood Pressure:")
+        print("1. Reduce salt intake.")
+        print("2. Maintain a healthy weight.")
+        print("3. Exercise regularly.")
+        print("4. Limit alcohol consumption.")
+        print("5. Manage stress through relaxation techniques.")
+
+    elif blood_pressure_status == "Low Blood Pressure":
+        print("Remedies for Low Blood Pressure:")
+        print("1. Increase salt intake (under medical supervision).")
+        print("2. Stay hydrated by drinking more fluids.")
+        print("3. Eat small, frequent meals.")
+        print("4. Avoid standing up too quickly.")
+        print("5. Consult a doctor for underlying causes.")
+
+def main():
+    print("Welcome to the Blood Pressure Identifier and Remedy Program")
+    systolic = float(input("Enter your systolic blood pressure (mmHg): "))
+    diastolic = float(input("Enter your diastolic blood pressure (mmHg): "))
+
+    blood_pressure_status = identify_blood_pressure(systolic, diastolic)
+    print(f"Your blood pressure is: {blood_pressure_status}")
+    print_remedies(blood_pressure_status)
+
+
